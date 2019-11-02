@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69758E9112820292999EF9E1 /* Pods_MVVM_Properties_and_Commands.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CE5AB51897D3B387D00353 /* Pods_MVVM_Properties_and_Commands.framework */; };
+		CE1FE315236DF32B004CB351 /* UIKit+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE314236DF32B004CB351 /* UIKit+Combine.swift */; };
 		CEC722B6236D863500A0B92D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC722B5236D863500A0B92D /* AppDelegate.swift */; };
 		CEC722B8236D863500A0B92D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC722B7236D863500A0B92D /* SceneDelegate.swift */; };
 		CEC722BA236D863500A0B92D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC722B9236D863500A0B92D /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		147D6248F65596212FBFAB77 /* Pods-MVVM Properties and Commands.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Properties and Commands.debug.xcconfig"; path = "Target Support Files/Pods-MVVM Properties and Commands/Pods-MVVM Properties and Commands.debug.xcconfig"; sourceTree = "<group>"; };
 		A049DE3F61DB1D4EA3E3EEB5 /* Pods-MVVM Properties and Commands.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Properties and Commands.release.xcconfig"; path = "Target Support Files/Pods-MVVM Properties and Commands/Pods-MVVM Properties and Commands.release.xcconfig"; sourceTree = "<group>"; };
+		CE1FE314236DF32B004CB351 /* UIKit+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Combine.swift"; sourceTree = "<group>"; };
 		CEC722B2236D863500A0B92D /* MVVM Properties and Commands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM Properties and Commands.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC722B5236D863500A0B92D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC722B7236D863500A0B92D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				CEC722C3236D863600A0B92D /* Info.plist */,
 				CEC722C9236D88E300A0B92D /* ViewModel.swift */,
 				CEC722CB236D8BB400A0B92D /* Command.swift */,
+				CE1FE314236DF32B004CB351 /* UIKit+Combine.swift */,
 			);
 			path = "MVVM Properties and Commands";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1FE315236DF32B004CB351 /* UIKit+Combine.swift in Sources */,
 				CEC722BA236D863500A0B92D /* ViewController.swift in Sources */,
 				CEC722B6236D863500A0B92D /* AppDelegate.swift in Sources */,
 				CEC722CA236D88E300A0B92D /* ViewModel.swift in Sources */,
