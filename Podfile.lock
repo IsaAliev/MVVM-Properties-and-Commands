@@ -1,0 +1,24 @@
+PODS:
+  - Bond (7.6.0):
+    - Differ (~> 1.3)
+    - ReactiveKit (~> 3.10)
+  - Differ (1.4.3)
+  - ReactiveKit (3.14.0)
+
+DEPENDENCIES:
+  - Bond
+
+SPEC REPOS:
+  trunk:
+    - Bond
+    - Differ
+    - ReactiveKit
+
+SPEC CHECKSUMS:
+  Bond: 5d626bfbbfc60b213ec35badb8f4fd81beff6a5f
+  Differ: 6c7477d6187e8c36d02ec342a3c321061b85a0ea
+  ReactiveKit: bee31957333d98c5b443609fe099ebccdf055d15
+
+PODFILE CHECKSUM: 7723ab2a85898b01767e24617db7d08657c165bb
+
+COCOAPODS: 1.8.3

@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69758E9112820292999EF9E1 /* Pods_MVVM_Properties_and_Commands.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CE5AB51897D3B387D00353 /* Pods_MVVM_Properties_and_Commands.framework */; };
 		CEC722B6236D863500A0B92D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC722B5236D863500A0B92D /* AppDelegate.swift */; };
 		CEC722B8236D863500A0B92D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC722B7236D863500A0B92D /* SceneDelegate.swift */; };
 		CEC722BA236D863500A0B92D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC722B9236D863500A0B92D /* ViewController.swift */; };
 		CEC722BD236D863500A0B92D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC722BB236D863500A0B92D /* Main.storyboard */; };
 		CEC722BF236D863600A0B92D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC722BE236D863600A0B92D /* Assets.xcassets */; };
 		CEC722C2236D863600A0B92D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC722C0236D863600A0B92D /* LaunchScreen.storyboard */; };
+		CEC722CA236D88E300A0B92D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC722C9236D88E300A0B92D /* ViewModel.swift */; };
+		CEC722CC236D8BB400A0B92D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC722CB236D8BB400A0B92D /* Command.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		147D6248F65596212FBFAB77 /* Pods-MVVM Properties and Commands.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Properties and Commands.debug.xcconfig"; path = "Target Support Files/Pods-MVVM Properties and Commands/Pods-MVVM Properties and Commands.debug.xcconfig"; sourceTree = "<group>"; };
+		A049DE3F61DB1D4EA3E3EEB5 /* Pods-MVVM Properties and Commands.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Properties and Commands.release.xcconfig"; path = "Target Support Files/Pods-MVVM Properties and Commands/Pods-MVVM Properties and Commands.release.xcconfig"; sourceTree = "<group>"; };
 		CEC722B2236D863500A0B92D /* MVVM Properties and Commands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM Properties and Commands.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC722B5236D863500A0B92D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC722B7236D863500A0B92D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		CEC722BE236D863600A0B92D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC722C1236D863600A0B92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC722C3236D863600A0B92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC722C9236D88E300A0B92D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CEC722CB236D8BB400A0B92D /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		D5CE5AB51897D3B387D00353 /* Pods_MVVM_Properties_and_Commands.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Properties_and_Commands.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69758E9112820292999EF9E1 /* Pods_MVVM_Properties_and_Commands.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ADCE1B09A9A5D59A7C894C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5CE5AB51897D3B387D00353 /* Pods_MVVM_Properties_and_Commands.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEC722A9236D863500A0B92D = {
 			isa = PBXGroup;
 			children = (
 				CEC722B4236D863500A0B92D /* MVVM Properties and Commands */,
 				CEC722B3236D863500A0B92D /* Products */,
+				FC341539B42B7B3DD8833F12 /* Pods */,
+				2ADCE1B09A9A5D59A7C894C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +82,19 @@
 				CEC722BE236D863600A0B92D /* Assets.xcassets */,
 				CEC722C0236D863600A0B92D /* LaunchScreen.storyboard */,
 				CEC722C3236D863600A0B92D /* Info.plist */,
+				CEC722C9236D88E300A0B92D /* ViewModel.swift */,
+				CEC722CB236D8BB400A0B92D /* Command.swift */,
 			);
 			path = "MVVM Properties and Commands";
+			sourceTree = "<group>";
+		};
+		FC341539B42B7B3DD8833F12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				147D6248F65596212FBFAB77 /* Pods-MVVM Properties and Commands.debug.xcconfig */,
+				A049DE3F61DB1D4EA3E3EEB5 /* Pods-MVVM Properties and Commands.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEC722C6236D863600A0B92D /* Build configuration list for PBXNativeTarget "MVVM Properties and Commands" */;
 			buildPhases = (
+				20ED640440E5AF92F26B94FE /* [CP] Check Pods Manifest.lock */,
 				CEC722AE236D863500A0B92D /* Sources */,
 				CEC722AF236D863500A0B92D /* Frameworks */,
 				CEC722B0236D863500A0B92D /* Resources */,
+				175405D106C54BB56908D668 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +165,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		175405D106C54BB56908D668 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM Properties and Commands/Pods-MVVM Properties and Commands-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM Properties and Commands/Pods-MVVM Properties and Commands-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM Properties and Commands/Pods-MVVM Properties and Commands-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20ED640440E5AF92F26B94FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVM Properties and Commands-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEC722AE236D863500A0B92D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +214,8 @@
 			files = (
 				CEC722BA236D863500A0B92D /* ViewController.swift in Sources */,
 				CEC722B6236D863500A0B92D /* AppDelegate.swift in Sources */,
+				CEC722CA236D88E300A0B92D /* ViewModel.swift in Sources */,
+				CEC722CC236D8BB400A0B92D /* Command.swift in Sources */,
 				CEC722B8236D863500A0B92D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +358,7 @@
 		};
 		CEC722C7236D863600A0B92D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147D6248F65596212FBFAB77 /* Pods-MVVM Properties and Commands.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +376,7 @@
 		};
 		CEC722C8236D863600A0B92D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A049DE3F61DB1D4EA3E3EEB5 /* Pods-MVVM Properties and Commands.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
