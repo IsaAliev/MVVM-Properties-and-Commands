@@ -32,6 +32,11 @@ class ViewController: UIViewController {
         model.$greeting.assign(to: \.text, on: greetingLabel).store(in: &disposables)
         nameTextField.publisher().assign(to: \.name, on: model).store(in: &disposables)
         
+        // Bonus: Check Out MyCombine.swift for custom Publisher
+        model.$greeting.myCombine(p2: model.$name).sink { (gr, name) in
+            print("\(gr) \(name)")
+        }.store(in: &disposables)
+        
         sayHelloButton.publisher().subscribe(model.sayHelloCommand)
     }
 }
