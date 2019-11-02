@@ -7,16 +7,29 @@
 //
 
 import Foundation
-import ReactiveKit
+import Combine
 
-protocol Command: class, BindableProtocol {
+protocol Command: class, Subscriber where Input == Void, Failure == Never {
+    var subscription: Subscription? { get set }
+    
     func execute()
+    func stop()
 }
 
 extension Command {
-    func bind(signal: Signal<Void, Never>) -> Disposable {
-        return signal.observeNext { [weak self] _ in
-            self?.execute()
-        }
+    func receive(_ input: Void) -> Subscribers.Demand {
+        execute()
+        return .unlimited
+    }
+    
+    func receive(subscription: Subscription) {
+        self.subscription = subscription
+        subscription.request(.unlimited)
+    }
+    
+    func receive(completion: Subscribers.Completion<Never>) {}
+    
+    func stop() {
+        subscription?.cancel()
     }
 }

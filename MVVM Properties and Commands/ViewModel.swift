@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import Bond
+import Combine
 
 class ActionCommand: Command {
-    typealias Element = Void
     private var actionBlock: () -> ()
+    internal var subscription: Subscription?
     
     init(_ actionBlock: @escaping () -> ()) {
         self.actionBlock = actionBlock
@@ -23,8 +23,9 @@ class ActionCommand: Command {
 }
 
 class ViewModel {
-    let name = Observable<String?>(nil)
-    let greeting = Observable<String?>(nil)
+    @Published var name: String?
+    @Published var greeting: String?
+    
     lazy var sayHelloCommand: ActionCommand = {
         return ActionCommand { [unowned self] in
             self.sayHello()
@@ -32,6 +33,6 @@ class ViewModel {
     }()
     
     private func sayHello() {
-        greeting.value = "Hello, \(name.value ?? "")"
+        greeting = "Hello, \(name ?? "")"
     }
 }
