@@ -9,11 +9,10 @@
 import Foundation
 import Combine
 
-protocol Command: class, Subscriber where Input == Void, Failure == Never {
+protocol Command: class, Subscriber, Cancellable where Input == Void, Failure == Never {
     var subscription: Subscription? { get set }
     
     func execute()
-    func stop()
 }
 
 extension Command {
@@ -27,9 +26,11 @@ extension Command {
         subscription.request(.unlimited)
     }
     
-    func receive(completion: Subscribers.Completion<Never>) {}
+    func receive(completion: Subscribers.Completion<Never>) {
+        subscription?.cancel()
+    }
     
-    func stop() {
+    func cancel() {
         subscription?.cancel()
     }
 }

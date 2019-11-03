@@ -103,3 +103,13 @@ extension CombineCompatible where Self: UIButton {
         return ButtonPublihser(self)
     }
 }
+
+extension ButtonPublihser {
+    func trigger<S>(_ subscriber: S) -> AnyCancellable where S: Subscriber & Cancellable, S.Input == Void, S.Failure == Never {
+        subscribe(subscriber)
+        
+        return AnyCancellable {
+            subscriber.cancel()
+        }
+    }
+}

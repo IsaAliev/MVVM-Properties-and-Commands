@@ -35,8 +35,4 @@ class ViewModel {
     private func sayHello() {
         greeting = "Hello, \(name ?? "")"
     }
-    
-    deinit {
-        sayHelloCommand.stop()
-    }
 }
